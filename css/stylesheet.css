@@ -1,0 +1,36 @@
+
+
+#landingwrapper {
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-areas: 
+    'hd hd hd'
+    'nav sc1 .'
+    '. sc2 .'
+    ;
+}
+
+header {
+    grid-area: hd;
+    background-color: blue;
+}
+
+nav {
+    grid-area: nav;
+    background-color: red;
+}
+
+section {
+
+}
+
+#sc1 {
+    grid-area: sc1;
+    background-color: gray;
+}
+
+#sc2 {
+    grid-area: sc2;
+    background-color: black;
+}
