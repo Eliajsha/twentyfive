@@ -2,32 +2,61 @@
 
 #landingwrapper {
     display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-columns: 1fr 70vw 1fr;
     grid-template-rows: 20vh 40vh 40vh;
     grid-template-areas: 
     'lg hd hd'
     'nav sc1 .'
     '. sc2 .'
     ;
+    gap: 5px;
+    
 }
 
 header {
     grid-area: hd;
-    background-color: blue;
+    align-content: center;
 }
 
 nav {
     grid-area: nav;
-    background-color: red;
+    background-color: rgb(112, 202, 112);
+    border-color: green;
+    border-radius: 20px;
+    border-width: 8px;
+    border-style:solid;
+    text-align: center;
+}
+
+a {
+    display: flex;
+    background-color: rgb(204, 199, 199);
+    text-decoration: none;
+    color: black;
+    border: 3px;
+    border: solid;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+    margin: 1px;
+}
+
+aside {
+    display: flex;
+    justify-self: center;
+}
+
+h3 {
+    text-align: center;
+    
 }
 
 section {
-
+    padding: 50px;
 }
 
 #sc1 {
     grid-area: sc1;
-    background-color: gray;
 }
 
 #sc2 {
@@ -36,5 +65,22 @@ section {
 
 #logga {
     grid-area: lg;
-    background-color: darkblue;
+    max-height: 20vh;
+    border-radius: 100px;
+}
+
+#info {
+    text-align: center;
+}
+
+#navrub {
+    margin: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .menu {
+        width: 50vw;
+    }
+    
+
 }
