@@ -1,31 +1,12 @@
 
-
-#landingwrapper {
-    display: grid;
-    grid-template-columns: 1fr 70vw 1fr;
-    grid-template-rows: 20vh 40vh 40vh;
-    grid-template-areas: 
-    'lg hd hd'
-    'nav sc1 .'
-    '. sc2 .'
-    ;
-    gap: 5px;
-    
-}
-
+/*-------------------------- allmänn css --------------------------*/
 header {
     grid-area: hd;
-    align-content: center;
-}
-
-nav {
-    grid-area: nav;
-    background-color: rgb(112, 202, 112);
-    border-color: green;
-    border-radius: 20px;
-    border-width: 8px;
-    border-style:solid;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem;
+    
 }
 
 a {
@@ -55,6 +36,40 @@ section {
     padding: 50px;
 }
 
+#logga {
+    grid-area: lg;
+    max-height: 20vh;
+    border-radius: 100px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(112, 202, 112);
+    border-color: green;
+    border-radius: 20px;
+    border-width: 8px;
+    border-style:solid;
+    text-align: center;
+}
+
+#navrub {
+    margin: 10px;
+}
+
+/*-------------------------- landing page css --------------------------*/
+#landing-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 70vw 1fr;
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-areas: 
+    'lg hd hd'
+    'nav sc1 .'
+    '. sc2 .'
+    ;
+    gap: 5px;
+    
+}
+
 #sc1 {
     grid-area: sc1;
 }
@@ -63,24 +78,120 @@ section {
     grid-area: sc2;
 }
 
-#logga {
-    grid-area: lg;
-    max-height: 20vh;
-    border-radius: 100px;
-}
-
 #info {
     text-align: center;
 }
 
-#navrub {
-    margin: 10px;
+.menu{
+    height: 100vh;
+    width: 30vw;
+    background-color: rgb(112, 202, 112);
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.5s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+    text-align: center;
+}
+
+.menu-button{
+    cursor: pointer;
+    display: inline;
+    margin-right: 2rem;
+}
+
+.menu-button i.material-icons{
+    font-size: 2.5rem;
+}
+
+.show{
+    left: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
+@media screen and (max-width: 599px) {
+    .menu-button {
+        left: 0;
+    }
+    #landing-wrapper {
+        display: grid;
+        grid-template-columns: 15vh 15vh 35vh 1fr;
+        grid-template-rows: 1fr 60vw 20vw;
+        grid-template-areas: 
+        'hd hd lg'
+        'sc1 sc1 sc1'
+        'sc2 sc2 sc2'
+        ;
+    }
+    
+    #desktopnav {
+        position: fixed;
+        left: -90vw;
+    }
+
+    #logga {
+        position:fixed;
+        left: 75vw;
+        max-height: 15vh;
+    }
 }
 
 @media screen and (min-width: 600px) {
     .menu {
         width: 50vw;
     }
+    .menu-button {
+        position: fixed;
+        left: -90vw;
+    }
     
-
 }
+
+/*-------------------------- info om klättring css --------------------------*/
+
+#info-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 42vw auto;
+    grid-template-rows: 20vh 40vh auto;
+    grid-template-areas: 
+    'lg hd hd'
+    'nav sec1 sec2'
+    '. sec3 sec4'    
+    ;
+    gap: 5px;
+}
+
+#info-sec1 {
+    grid-area: sec1;
+}
+
+#info-sec2 {
+    grid-area: sec2;
+}
+
+#info-sec3 {
+    grid-area: sec3;
+}
+
+#info-sec4 {
+    grid-area: sec4;
+}
+
+/*-------------------------- produkt css --------------------------*/
+
+/*-------------------------- anställda css --------------------------*/
