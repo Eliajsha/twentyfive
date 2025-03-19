@@ -1,5 +1,8 @@
 
 /*-------------------------- allmänn css --------------------------*/
+
+
+
 body {
     padding-bottom: 20px;
 }
@@ -24,6 +27,7 @@ a {
     display: inline-block;
     padding: 5px;
     margin: 1px;
+    
 }
 
 aside {
@@ -39,6 +43,8 @@ h3 {
 section {
     padding-left: 50px;
     padding-right: 50px;
+    background-color:  rgb(181, 234, 181);
+    border-radius: 20px;
 }
 
 #logga {
@@ -131,11 +137,11 @@ nav {
     }
     #landing-wrapper {
         display: grid;
-        grid-template-columns: 15vh 85vh;
-        grid-template-rows: 1fr 60vw 20vw;
+        grid-template-columns: 30vw 50vw auto;
+        grid-template-rows: 15vh auto;
         grid-template-areas: 
-        'hd hd lg'
-        'sc1 sc1 sc1'
+        'hd . lg'
+        'sc1 sc1 .'
         ;
     }
     
@@ -149,6 +155,7 @@ nav {
         left: 75vw;
         max-height: 15vh;
     } 
+    
 }
 
 @media screen and (min-width: 600px) {
@@ -167,13 +174,13 @@ nav {
 #info-wrapper {
     display: grid;
     grid-template-columns: 15vw 42vw auto;
-    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-rows: 20vh auto 40vh;
     grid-template-areas: 
     'lg hd hd'
     'nav sec1 sec2'
     '. sec3 sec4'    
     ;
-    gap: 5px;
+    gap: 10px;
     row-gap: 20px;
 }
 
@@ -197,17 +204,18 @@ nav {
     .menu-button {
         left: 0;
     }
-    #landing-wrapper {
+    #info-wrapper {
         display: grid;
-        grid-template-columns: 15vh 21vh 21vh 21vh auto;
-        grid-template-rows: 1fr 60vw 20vw;
+        grid-template-columns: 1fr 33vw 33vw;
+        grid-template-rows: 15vh auto auto auto auto;
         grid-template-areas: 
         'hd hd lg'
-        '. sec1 .'
-        '. sec2 .'
-        '. sec3 .'
-        '. sec4 .'
+        'sec1 sec1 sec1'
+        'sec2 sec2 sec2'
+        'sec3 sec3 sec3'
+        'sec4 sec4 sec4'
         ;
+        
         
     }
     
