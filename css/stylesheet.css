@@ -231,6 +231,63 @@ nav {
     } 
 }
 
-/*-------------------------- produkt css --------------------------*/
-
 /*-------------------------- anställda css --------------------------*/
+
+#anstallda-wrapper {
+    display: grid;
+    grid-template-columns: 15vw repeat(2, 28vw) auto;
+    grid-template-rows: 20vh repeat(3, 40vh);
+    grid-template-areas: 
+    'lg hd hd hd'
+    'nav s1 s2 s3'
+    '. s4 s5 s6'
+    '. s7 s8 s9'
+    ;
+    gap: 5px;
+}
+
+#anstalld_1 {
+    grid-area: s1;
+}
+
+#anstalld_2 {
+    grid-area: s2;
+
+}
+
+#anstalld_3 {
+    grid-area: s3;
+
+}
+
+#anstalld_4 {
+    grid-area: s4;
+
+}
+
+#anstalld_5 {
+    grid-area: s5;
+
+}
+
+#anstalld_6 {
+    grid-area: s6;
+
+}
+
+#anstalld_7 {
+    grid-area: s7;
+
+}
+
+#anstalld_8 {
+    grid-area: s8;
+
+}
+
+#anstalld_9 {
+    grid-area: s9;
+
+}
+
+/*-------------------------- utrustning css --------------------------*/
