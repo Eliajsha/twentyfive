@@ -18,16 +18,20 @@ header {
 
 a {
     display: flex;
-    background-color: rgb(204, 199, 199);
+    background-color: rgb(238, 238, 238);
     text-decoration: none;
     color: black;
-    border: 3px;
     border: solid;
     border-radius: 10px;
     display: inline-block;
     padding: 5px;
-    margin: 1px;
-    
+    margin: 1px; 
+}
+
+a:hover {
+    background-color: green;
+    color: white;
+    border-color: rgb(232, 231, 231);
 }
 
 aside {
@@ -53,6 +57,10 @@ section {
     border-radius: 100px;
 }
 
+#logga:hover {
+    transform: scale(1.05);
+}
+
 nav {
     grid-area: nav;
     background-color: rgb(112, 202, 112);
@@ -62,10 +70,36 @@ nav {
     border-style:solid;
     text-align: center;
     margin: 8px;
+    max-height: 34vh;
 }
 
 #navrub {
     margin: 10px;
+}
+
+img {
+    max-width: 10vw;
+    border-radius: 20px;
+}
+
+img:hover {
+    transform: scale(1.22);
+}
+
+button {
+    background-color: rgb(240, 237, 237);
+    color: black;
+    border-radius: 30px;
+    border-width: 5px;
+    border-color: black;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    border-color: rgb(110, 180, 101);
+    cursor: pointer;
 }
 
 /*-------------------------- landing page css --------------------------*/
@@ -236,14 +270,30 @@ nav {
 #anstallda-wrapper {
     display: grid;
     grid-template-columns: 15vw repeat(2, 28vw) auto;
-    grid-template-rows: 20vh repeat(3, 40vh);
+    grid-template-rows: 20vh repeat(3, auto);
     grid-template-areas: 
     'lg hd hd hd'
     'nav s1 s2 s3'
     '. s4 s5 s6'
     '. s7 s8 s9'
     ;
-    gap: 5px;
+    gap: 10px;
+}
+
+.anstalld {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.anstalld:hover {
+    transform: scale(1.03);
+    background-color:  rgb(151, 211, 151);;
+}
+
+.p-anstalld{
+    margin-top: -10px;
 }
 
 #anstalld_1 {
@@ -252,42 +302,83 @@ nav {
 
 #anstalld_2 {
     grid-area: s2;
-
 }
 
 #anstalld_3 {
     grid-area: s3;
-
 }
 
 #anstalld_4 {
     grid-area: s4;
-
 }
 
 #anstalld_5 {
     grid-area: s5;
-
 }
 
 #anstalld_6 {
     grid-area: s6;
-
 }
 
 #anstalld_7 {
     grid-area: s7;
-
 }
 
 #anstalld_8 {
     grid-area: s8;
-
 }
 
 #anstalld_9 {
     grid-area: s9;
+}
 
+@media screen and (max-width: 599px) {
+    .menu-button {
+        left: 0;
+    }
+    #anstallda-wrapper {
+        display: grid;
+        grid-template-columns: 45vw auto;
+        grid-template-rows: 15vh repeat(5, auto);
+        grid-template-areas: 
+        'hd lg'
+        's1 s2'
+        's3 s4'
+        's5 s6'
+        's7 s8'
+        's9 .'
+        ;
+        
+        
+    }
+    
+    #desktopnav {
+        position: fixed;
+        left: -90vw;
+    }
+
+    #logga {
+        position:fixed;
+        top: 3vh;
+        left: 75vw;
+        max-width: 13vh;
+    } 
+
+    nav {
+        max-height: 94vh;
+    }
+
+    .anstalld:hover {
+        transform: none;
+    }
+    
+    img {
+        max-width: 20vw;
+    }
+
+    img:hover {
+        transform: none;
+    }
 }
 
 /*-------------------------- utrustning css --------------------------*/
