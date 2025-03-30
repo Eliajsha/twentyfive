@@ -15,6 +15,6 @@ function showMenu() {
 document.getElementById("logga").addEventListener("click", function() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth" // "smooth" ger en mjuk scroll-animation
+      behavior: "smooth"
     });
   });

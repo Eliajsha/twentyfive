@@ -13,23 +13,21 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0rem;
-    
 }
 
 a {
-    display: flex;
+    display: inline-block;
     background-color: rgb(238, 238, 238);
     text-decoration: none;
     color: black;
     border: solid;
     border-radius: 10px;
-    display: inline-block;
     padding: 5px;
     margin: 1px; 
 }
 
 a:hover {
-    background-color: green;
+    background-color: rgb(0, 103, 0);
     color: white;
     border-color: rgb(232, 231, 231);
 }
@@ -37,11 +35,6 @@ a:hover {
 aside {
     display: flex;
     justify-self: center;
-}
-
-h3 {
-    text-align: center;
-    
 }
 
 section {
@@ -63,7 +56,7 @@ section {
 
 nav {
     grid-area: nav;
-    background-color: rgb(112, 202, 112);
+    background-color: #86eb86;
     border-color: green;
     border-radius: 20px;
     border-width: 8px;
@@ -73,7 +66,7 @@ nav {
     max-height: 34vh;
 }
 
-#navrub {
+.navrub {
     margin: 10px;
 }
 
@@ -96,16 +89,35 @@ button {
 }
 
 button:hover {
-    background-color: green;
+    background-color: rgb(0, 103, 0);
     color: white;
     border-color: rgb(110, 180, 101);
     cursor: pointer;
 }
 
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
 /*-------------------------- landing page css --------------------------*/
 #landing-wrapper {
     display: grid;
-    grid-template-columns: 15vw 70vw 1fr;
+    grid-template-columns: 15vw 70vw auto;
     grid-template-rows: 20vh 40vh;
     grid-template-areas: 
     'lg hd hd'
@@ -113,6 +125,10 @@ button:hover {
     ;
     gap: 5px;
     
+}
+
+#welcome {
+    text-align: center;
 }
 
 #sc1 {
@@ -126,7 +142,6 @@ button:hover {
 .menu{
     height: 100vh;
     width: 30vw;
-    background-color: rgb(112, 202, 112);
     position: fixed;
     top: 0;
     left: -90vw;
@@ -139,7 +154,8 @@ button:hover {
 .menu-button{
     cursor: pointer;
     display: inline;
-    margin-right: 2rem;
+    margin-right: 0.2rem;
+    margin-top: 0.4rem;
 }
 
 .menu-button i.material-icons{
@@ -181,14 +197,23 @@ button:hover {
     
     #desktopnav {
         position: fixed;
-        left: -90vw;
+        left: -120vw;
     }
 
     #logga {
         position:fixed;
+        top: 4vh;
         left: 75vw;
-        max-height: 15vh;
+        max-width: 10vh;
     } 
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
     
 }
 
@@ -207,8 +232,8 @@ button:hover {
 
 #info-wrapper {
     display: grid;
-    grid-template-columns: 15vw 42vw auto;
-    grid-template-rows: 20vh auto 40vh;
+    grid-template-columns: 15vw 40vw auto;
+    grid-template-rows: 20vh auto auto;
     grid-template-areas: 
     'lg hd hd'
     'nav sec1 sec2'
@@ -235,34 +260,20 @@ button:hover {
 }
 
 @media screen and (max-width: 599px) {
-    .menu-button {
-        left: 0;
-    }
     #info-wrapper {
         display: grid;
-        grid-template-columns: 1fr 33vw 33vw;
+        grid-template-columns: auto auto auto;
         grid-template-rows: 15vh auto auto auto auto;
         grid-template-areas: 
-        'hd hd lg'
+        'hd . lg'
         'sec1 sec1 sec1'
         'sec2 sec2 sec2'
         'sec3 sec3 sec3'
         'sec4 sec4 sec4'
         ;
         
-        
-    }
-    
-    #desktopnav {
-        position: fixed;
-        left: -90vw;
     }
 
-    #logga {
-        position:fixed;
-        left: 75vw;
-        max-height: 15vh;
-    } 
 }
 
 /*-------------------------- anställda css --------------------------*/
@@ -289,10 +300,10 @@ button:hover {
 
 .anstalld:hover {
     transform: scale(1.03);
-    background-color:  rgb(151, 211, 151);;
+    background-color:  rgb(151, 211, 151);
 }
 
-.p-anstalld{
+.p-card{
     margin-top: -10px;
 }
 
@@ -333,9 +344,6 @@ button:hover {
 }
 
 @media screen and (max-width: 599px) {
-    .menu-button {
-        left: 0;
-    }
     #anstallda-wrapper {
         display: grid;
         grid-template-columns: 45vw auto;
@@ -352,24 +360,14 @@ button:hover {
         
     }
     
-    #desktopnav {
-        position: fixed;
-        left: -90vw;
-    }
-
-    #logga {
-        position:fixed;
-        top: 3vh;
-        left: 75vw;
-        max-width: 13vh;
-    } 
-
     nav {
         max-height: 94vh;
     }
 
     .anstalld:hover {
         transform: none;
+        background-color: rgb(181, 234, 181);
+
     }
     
     img {
@@ -381,4 +379,119 @@ button:hover {
     }
 }
 
-/*-------------------------- utrustning css --------------------------*/
+/*-------------------------- Produkter css --------------------------*/
+
+#produkter-wrapper {
+    display: grid;
+    grid-template-columns: 15vw repeat(4, auto);
+    grid-template-rows: 20vh repeat(3, auto);
+    grid-template-areas:  
+    'lg hd hd hd hd'
+    'nav sect1 sect2 sect3 sect4'
+    '. sect5 sect6 sect7 sect8'
+    '. sect9 sect10 sect11 sect12'
+    ;
+    gap: 15px;
+}
+
+.produkt-bild {
+    max-width: 15vw;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.produkt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.produkt:hover {
+    transform: scale(1.05);
+    background-color:  rgb(151, 211, 151);
+}
+
+.pris {
+    margin-top: -5px;
+}
+
+.modell {
+    margin-top: -15px;
+}
+
+#produkt_1 {
+    grid-area: sect1;
+}
+
+#produkt_2 {
+    grid-area: sect2;
+}
+
+#produkt_3 {
+    grid-area: sect3;
+}
+
+#produkt_4 {
+    grid-area: sect4;
+}
+
+#produkt_5 {
+    grid-area: sect5;
+}
+
+#produkt_6 {
+    grid-area: sect6;
+}
+
+#produkt_7 {
+    grid-area: sect7;
+}
+
+#produkt_8 {
+    grid-area: sect8;
+}
+
+#produkt_9 {
+    grid-area: sect9;
+}
+
+#produkt_10 {
+    grid-area: sect10;
+}
+
+#produkt_11 {
+    grid-area: sect11;
+}
+
+#produkt_12 {
+    grid-area: sect12;
+}
+
+@media screen and (max-width: 599px) {
+    #produkter-wrapper {
+        display: grid;
+        grid-template-columns: 45vw auto;
+        grid-template-rows: 15vh repeat(6, auto);
+        grid-template-areas: 
+        'hd lg'
+        'sect1 sect2'
+        'sect3 sect4'
+        'sect5 sect6'
+        'sect7 sect8'
+        'sect9 sect10'
+        'sect11 sect12'
+        ;
+        
+        
+    }
+
+    .produkt:hover {
+        transform: none;
+        background-color: rgb(181, 234, 181);
+
+    }
+    
+    .produkt-bild {
+        max-width: 40vw;
+    }
+}
