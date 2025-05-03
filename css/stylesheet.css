@@ -1,12 +1,6 @@
 
 /*-------------------------- allmänn css --------------------------*/
 
-
-
-body {
-    padding-bottom: 20px;
-}
-
 header {
     grid-area: hd;
     display: flex;
@@ -113,18 +107,30 @@ p {
     line-height: 1.4;
 }
 
+footer {
+    grid-area: ft; 
+    text-align: center;
+    background-color: rgb(181, 234, 181);
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: green;
+    border-style: solid;
+    padding-bottom: 10px;
+}
+
 
 /*-------------------------- landing page css --------------------------*/
 #landing-wrapper {
     display: grid;
     grid-template-columns: 15vw 70vw auto;
-    grid-template-rows: 20vh 40vh;
+    grid-template-rows: 20vh 40vh auto;
     grid-template-areas: 
     'lg hd hd'
-    'nav sc1 .'
+    'nav sc1 sb'
+    '. st .'
+    'ft ft ft'
     ;
     gap: 5px;
-    
 }
 
 #welcome {
@@ -137,6 +143,14 @@ p {
 
 #info {
     text-align: center;
+}
+
+#sidobild {
+    grid-area: sb;
+    max-width: 13vw;
+    max-height: 40vh;
+    align-self: center;
+    transform: none;
 }
 
 .menu{
@@ -233,14 +247,44 @@ p {
 #info-wrapper {
     display: grid;
     grid-template-columns: 15vw 40vw auto;
-    grid-template-rows: 20vh auto auto;
+    grid-template-rows: 20vh auto auto auto;
     grid-template-areas: 
     'lg hd hd'
     'nav sec1 sec2'
     '. sec3 sec4'    
+    'ft ft ft'
     ;
     gap: 10px;
     row-gap: 20px;
+}
+
+.infobilder {
+    max-width: 30vw;
+    transform: none;
+    margin-top: 20px;
+}
+
+#bouldering {
+    transform: none;
+}
+
+#led {
+    transform: none;
+}
+
+#multipitch {
+    transform: none;
+}
+
+#freesolo {
+    transform: none;
+}
+
+.info-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 #info-sec1 {
@@ -257,6 +301,10 @@ p {
 
 #info-sec4 {
     grid-area: sec4;
+}
+
+.info-text {
+    margin-top: -10px;
 }
 
 @media screen and (max-width: 599px) {
@@ -281,12 +329,13 @@ p {
 #anstallda-wrapper {
     display: grid;
     grid-template-columns: 15vw repeat(2, 28vw) auto;
-    grid-template-rows: 20vh repeat(3, auto);
+    grid-template-rows: 20vh repeat(4, auto);
     grid-template-areas: 
     'lg hd hd hd'
     'nav s1 s2 s3'
     '. s4 s5 s6'
     '. s7 s8 s9'
+    'ft ft ft ft'
     ;
     gap: 10px;
 }
@@ -384,12 +433,13 @@ p {
 #produkter-wrapper {
     display: grid;
     grid-template-columns: 15vw repeat(4, auto);
-    grid-template-rows: 20vh repeat(3, auto);
+    grid-template-rows: 20vh repeat(4, auto);
     grid-template-areas:  
     'lg hd hd hd hd'
     'nav sect1 sect2 sect3 sect4'
     '. sect5 sect6 sect7 sect8'
     '. sect9 sect10 sect11 sect12'
+    'ft ft ft ft ft'
     ;
     gap: 15px;
 }

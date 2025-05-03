@@ -18,3 +18,10 @@ document.getElementById("logga").addEventListener("click", function() {
       behavior: "smooth"
     });
   });
+
+document.getElementsByClassName("tillbaka").addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+});
