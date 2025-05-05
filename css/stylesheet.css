@@ -18,6 +18,8 @@ a {
     border-radius: 10px;
     padding: 5px;
     margin: 1px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
 }
 
 a:hover {
@@ -62,6 +64,9 @@ nav {
 
 .navrub {
     margin: 10px;
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 img {
@@ -95,16 +100,37 @@ h1 {
 
 h2 {
     font-size: 26px;
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3 {
     font-size: 20px;
     text-align: center;
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.oldenburg-regular {
+    font-family: "Oldenburg", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+
+  
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
 }
 
 footer {
@@ -126,7 +152,7 @@ footer {
     grid-template-rows: 20vh 40vh auto;
     grid-template-areas: 
     'lg hd hd'
-    'nav sc1 sb'
+    'nav sc1 ssb'
     '. st .'
     'ft ft ft'
     ;
@@ -145,10 +171,12 @@ footer {
     text-align: center;
 }
 
-#sidobild {
-    grid-area: sb;
-    max-width: 13vw;
-    max-height: 40vh;
+#start-sidobild {
+    grid-area: ssb;
+    max-width: none;
+    max-height: none;
+    width: 13vw;
+    height: 40vh;
     align-self: center;
     transform: none;
 }
@@ -251,7 +279,7 @@ footer {
     grid-template-areas: 
     'lg hd hd'
     'nav sec1 sec2'
-    '. sec3 sec4'    
+    'sb sec3 sec4'    
     'ft ft ft'
     ;
     gap: 10px;
@@ -278,6 +306,15 @@ footer {
 
 #freesolo {
     transform: none;
+}
+
+#sidobild {
+    grid-area: sb;
+    max-width: none;
+    max-height: none;
+    width: 15vw;
+    height: 90vh;
+    align-self: center;
 }
 
 .info-sec {
@@ -463,6 +500,7 @@ footer {
 
 .pris {
     margin-top: -5px;
+    margin-bottom: -5px;
 }
 
 .modell {
@@ -515,6 +553,16 @@ footer {
 
 #produkt_12 {
     grid-area: sect12;
+}
+
+.star {
+    font-size: 2rem;
+    color: rgb(220, 198, 32);
+}
+
+.star-empty {
+    font-size: 2rem;
+    color: #383838;
 }
 
 @media screen and (max-width: 599px) {
