@@ -125,9 +125,6 @@ p {
     font-style: normal;
 }  
 
-
-  
-
 li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
@@ -144,6 +141,19 @@ footer {
     padding-bottom: 10px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 3px solid #39a20f;  
+    padding: 8px;        
+    text-align: left; 
+    background-color: rgb(224, 244, 224);   
+  }
+  th {
+    background-color: rgb(181, 234, 181); 
+  }
 
 /*-------------------------- landing page css --------------------------*/
 #landing-wrapper {
@@ -227,13 +237,15 @@ footer {
     .menu-button {
         left: 0;
     }
+
     #landing-wrapper {
         display: grid;
         grid-template-columns: 30vw 50vw auto;
-        grid-template-rows: 15vh auto;
+        grid-template-rows: 15vh repeat(2, auto);
         grid-template-areas: 
         'hd . lg'
-        'sc1 sc1 .'
+        'sc1 sc1 sc1'
+        'ft ft ft'
         ;
     }
     
@@ -256,6 +268,11 @@ footer {
     p {
         font-size: 18px;
     }
+
+    #start-sidobild {
+        left: -120vw;
+        position: fixed;
+    }
     
 }
 
@@ -275,7 +292,7 @@ footer {
 #info-wrapper {
     display: grid;
     grid-template-columns: 15vw 40vw auto;
-    grid-template-rows: 20vh auto auto auto;
+    grid-template-rows: 20vh repeat(3, auto);
     grid-template-areas: 
     'lg hd hd'
     'nav sec1 sec2'
@@ -313,8 +330,9 @@ footer {
     max-width: none;
     max-height: none;
     width: 15vw;
-    height: 90vh;
+    height: 80vh;
     align-self: center;
+    transform: none;
 }
 
 .info-sec {
@@ -347,16 +365,26 @@ footer {
 @media screen and (max-width: 599px) {
     #info-wrapper {
         display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: 15vh auto auto auto auto;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: 15vh repeat(5, auto);
         grid-template-areas: 
         'hd . lg'
         'sec1 sec1 sec1'
         'sec2 sec2 sec2'
         'sec3 sec3 sec3'
         'sec4 sec4 sec4'
+        'ft ft ft'
         ;
         
+    }
+
+    #sidobild {
+        position: fixed;
+        left: -120vw;
+    }
+
+    .infobilder {
+        max-width: 60vw;
     }
 
 }
@@ -440,12 +468,13 @@ footer {
         's3 s4'
         's5 s6'
         's7 s8'
-        's9 .'
+        's9 s9'
+        'ft ft'
         ;
         
         
     }
-    
+
     nav {
         max-height: 94vh;
     }
@@ -474,8 +503,8 @@ footer {
     grid-template-areas:  
     'lg hd hd hd hd'
     'nav sect1 sect2 sect3 sect4'
-    '. sect5 sect6 sect7 sect8'
-    '. sect9 sect10 sect11 sect12'
+    'gt sect5 sect6 sect7 sect8'
+    'pt sect9 sect10 sect11 sect12'
     'ft ft ft ft ft'
     ;
     gap: 15px;
@@ -555,6 +584,14 @@ footer {
     grid-area: sect12;
 }
 
+#gillatabell {
+    grid-area: gt;
+}
+
+#pristabell {
+    grid-area: pt;
+}
+
 .star {
     font-size: 2rem;
     color: rgb(220, 198, 32);
@@ -569,7 +606,7 @@ footer {
     #produkter-wrapper {
         display: grid;
         grid-template-columns: 45vw auto;
-        grid-template-rows: 15vh repeat(6, auto);
+        grid-template-rows: 15vh repeat(8, auto);
         grid-template-areas: 
         'hd lg'
         'sect1 sect2'
@@ -578,6 +615,8 @@ footer {
         'sect7 sect8'
         'sect9 sect10'
         'sect11 sect12'
+        'gt pt'
+        'ft ft'
         ;
         
         
